@@ -1,0 +1,9 @@
+import example.*
+import wollok.game.*
+
+program juego {
+	game.addVisualCharacter(wollok)
+	game.center().drawElement(caja)
+	game.whenCollideDo(caja, { personaje => personaje.irAlCentro() })
+	game.start()
+}
